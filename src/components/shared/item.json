@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_items",
+  "info": {
+    "displayName": "Item",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

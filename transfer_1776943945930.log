@@ -1,0 +1,6 @@
+[2026-04-23 15:32:25.940] warn: (Schema Integrity) api::tour-card.tour-card.attributes.slug does not exist on destination
+[2026-04-23 15:32:25.941] warn: (Schema Integrity) api::tour-card.tour-card.attributes.filterCategory does not exist on destination
+[2026-04-23 15:32:25.941] warn: (Schema Integrity) api::detail-page.detail-page does not exist on source
+[2026-04-23 15:32:25.941] warn: (Schema Integrity) api::home-page.home-page does not exist on source
+[2026-04-23 15:32:25.941] warn: (Schema Integrity) components.features-item does not exist on source
+[2026-04-23 15:32:25.941] warn: (Schema Integrity) blocks.hero does not exist on source

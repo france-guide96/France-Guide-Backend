@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "duration": {
+    "primaryText": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -31,7 +31,7 @@
         }
       }
     },
-    "primaryText": {
+    "duration": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -68,6 +68,55 @@
       "pluginOptions": {
         "i18n": {
           "localized": false
+        }
+      },
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.item",
+      "repeatable": true
+    },
+    "included": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.item",
+      "repeatable": true
+    },
+    "notIncluded": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.item",
+      "repeatable": true
+    },
+    "gallery": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.gallery",
+      "repeatable": true
+    },
+    "TourOverview": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
         }
       },
       "required": true
