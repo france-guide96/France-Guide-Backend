@@ -53,6 +53,24 @@
                 "videos",
                 "audios"
             ]
+        },
+        "slug": {
+            "type": "uid",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "targetField": "primaryText"
+        },
+        "filterCategory": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "required": true
         }
     }
 }
