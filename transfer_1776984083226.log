@@ -1,0 +1,11 @@
+[2026-04-24 02:41:23.234] warn: (Schema Integrity) api::tour-card.tour-card.attributes.highlights does not exist on destination
+[2026-04-24 02:41:23.235] warn: (Schema Integrity) api::tour-card.tour-card.attributes.included does not exist on destination
+[2026-04-24 02:41:23.235] warn: (Schema Integrity) api::tour-card.tour-card.attributes.notIncluded does not exist on destination
+[2026-04-24 02:41:23.236] warn: (Schema Integrity) api::tour-card.tour-card.attributes.gallery does not exist on destination
+[2026-04-24 02:41:23.236] warn: (Schema Integrity) api::tour-card.tour-card.attributes.TourOverview does not exist on destination
+[2026-04-24 02:41:23.236] warn: (Schema Integrity) shared.item does not exist on destination
+[2026-04-24 02:41:23.236] warn: (Schema Integrity) shared.gallery does not exist on destination
+[2026-04-24 02:42:51.282] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2026-04-24 02:42:51.312] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2026-04-24 02:42:51.318] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2026-04-24 02:42:51.321] error: [FATAL] WebSocket is not open: readyState 3 (CLOSED)

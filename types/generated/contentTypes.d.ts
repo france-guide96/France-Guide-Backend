@@ -467,6 +467,38 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
+  collectionName: 'home_pages';
+  info: {
+    displayName: 'Home Page';
+    pluralName: 'home-pages';
+    singularName: 'home-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      ['blocks.hero', 'components.features-item']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HeroDesc: Schema.Attribute.String;
+    HeroTitle: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page.home-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
   collectionName: 'tour_cards';
   info: {
@@ -529,12 +561,24 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    isRecommended: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::tour-card.tour-card'
     >;
     notIncluded: Schema.Attribute.Component<'shared.item', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    price: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -547,6 +591,12 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    rating: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     slug: Schema.Attribute.UID<'primaryText'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1078,6 +1128,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::home-page.home-page': ApiHomePageHomePage;
       'api::tour-card.tour-card': ApiTourCardTourCard;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

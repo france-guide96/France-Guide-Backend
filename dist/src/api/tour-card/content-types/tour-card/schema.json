@@ -72,6 +72,30 @@
             },
             "required": true
         },
+        "price": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "rating": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "isRecommended": {
+            "type": "boolean",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
         "highlights": {
             "type": "component",
             "pluginOptions": {
