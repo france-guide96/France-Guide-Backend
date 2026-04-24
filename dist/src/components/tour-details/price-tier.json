@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_tour_details_price_tiers",
+    "info": {
+        "displayName": "PriceTier"
+    },
+    "options": {},
+    "attributes": {
+        "price": {
+            "type": "biginteger",
+            "required": true
+        },
+        "range": {
+            "type": "string",
+            "required": true
+        }
+    },
+    "config": {}
+}

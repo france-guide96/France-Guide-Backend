@@ -21,7 +21,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "category": {
       "type": "string",
@@ -29,7 +30,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "duration": {
       "type": "string",
@@ -37,7 +39,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "bgImg": {
       "type": "media",
@@ -47,6 +50,7 @@
         }
       },
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -61,7 +65,8 @@
           "localized": true
         }
       },
-      "targetField": "primaryText"
+      "targetField": "primaryText",
+      "required": true
     },
     "filterCategory": {
       "type": "string",
@@ -78,7 +83,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "rating": {
       "type": "string",
@@ -104,7 +110,8 @@
         }
       },
       "component": "shared.item",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "included": {
       "type": "component",
@@ -114,7 +121,8 @@
         }
       },
       "component": "shared.item",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "notIncluded": {
       "type": "component",
@@ -134,16 +142,39 @@
         }
       },
       "component": "shared.gallery",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
-    "TourOverview": {
-      "type": "text",
+    "contentSections": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "component": "tour-details.content-block",
+      "repeatable": true
+    },
+    "pricing": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "tour-details.price-tier",
+      "repeatable": true,
       "required": true
+    },
+    "tourPlan": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "tour-details.timeline-step",
+      "repeatable": true
     }
   }
 }

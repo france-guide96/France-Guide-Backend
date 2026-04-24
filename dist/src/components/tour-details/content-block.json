@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_tour_details_content_blocks",
+    "info": {
+        "displayName": "ContentBlock"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        }
+    },
+    "config": {}
+}

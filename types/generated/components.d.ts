@@ -53,6 +53,40 @@ export interface SharedItem extends Struct.ComponentSchema {
   };
 }
 
+export interface TourDetailsContentBlock extends Struct.ComponentSchema {
+  collectionName: 'components_tour_details_content_blocks';
+  info: {
+    displayName: 'ContentBlock';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface TourDetailsPriceTier extends Struct.ComponentSchema {
+  collectionName: 'components_tour_details_price_tiers';
+  info: {
+    displayName: 'PriceTier';
+  };
+  attributes: {
+    price: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    range: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface TourDetailsTimelineStep extends Struct.ComponentSchema {
+  collectionName: 'components_tour_details_timeline_steps';
+  info: {
+    displayName: 'TimelineStep';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    time: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -60,6 +94,9 @@ declare module '@strapi/strapi' {
       'components.features-item': ComponentsFeaturesItem;
       'shared.gallery': SharedGallery;
       'shared.item': SharedItem;
+      'tour-details.content-block': TourDetailsContentBlock;
+      'tour-details.price-tier': TourDetailsPriceTier;
+      'tour-details.timeline-step': TourDetailsTimelineStep;
     }
   }
 }

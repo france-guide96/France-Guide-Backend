@@ -516,12 +516,23 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
   };
   attributes: {
     bgImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     category: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contentSections: Schema.Attribute.Component<
+      'tour-details.content-block',
+      true
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -531,6 +542,7 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     duration: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -544,18 +556,21 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
         };
       }>;
     gallery: Schema.Attribute.Component<'shared.gallery', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     highlights: Schema.Attribute.Component<'shared.item', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     included: Schema.Attribute.Component<'shared.item', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -579,12 +594,21 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
         };
       }>;
     price: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    pricing: Schema.Attribute.Component<'tour-details.price-tier', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     primaryText: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -598,13 +622,13 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
         };
       }>;
     slug: Schema.Attribute.UID<'primaryText'> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    TourOverview: Schema.Attribute.Text &
-      Schema.Attribute.Required &
+    tourPlan: Schema.Attribute.Component<'tour-details.timeline-step', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
