@@ -1,0 +1,4 @@
+[2026-04-28 16:37:33.209] warn: (Schema Integrity) api::about-page.about-page.attributes.title does not exist on source
+[2026-04-28 16:37:33.210] warn: (Schema Integrity) api::about-page.about-page.attributes.subtitle does not exist on source
+[2026-04-28 16:37:33.210] warn: (Schema Integrity) api::home-page.home-page does not exist on destination
+[2026-04-28 16:37:33.214] error: [FATAL] Unresolved differences in schema
