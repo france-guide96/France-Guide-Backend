@@ -33,6 +33,23 @@
             },
             "required": true
         },
+        "price": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "rating": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
         "duration": {
             "type": "string",
             "pluginOptions": {
@@ -77,42 +94,6 @@
             },
             "required": true
         },
-        "price": {
-            "type": "string",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "required": true
-        },
-        "rating": {
-            "type": "string",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            }
-        },
-        "isRecommended": {
-            "type": "boolean",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            }
-        },
-        "highlights": {
-            "type": "component",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "component": "shared.item",
-            "repeatable": true,
-            "required": true
-        },
         "included": {
             "type": "component",
             "pluginOptions": {
@@ -123,16 +104,6 @@
             "component": "shared.item",
             "repeatable": true,
             "required": true
-        },
-        "notIncluded": {
-            "type": "component",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "component": "shared.item",
-            "repeatable": true
         },
         "gallery": {
             "type": "component",
@@ -165,16 +136,6 @@
             "component": "tour-details.price-tier",
             "repeatable": true,
             "required": true
-        },
-        "tourPlan": {
-            "type": "component",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "component": "tour-details.timeline-step",
-            "repeatable": true
         }
     }
 }

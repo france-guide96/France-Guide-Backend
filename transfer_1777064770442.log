@@ -1,0 +1,7 @@
+[2026-04-25 01:06:10.450] warn: (Schema Integrity) api::tour-card.tour-card.attributes.contentSections does not exist on destination
+[2026-04-25 01:06:10.450] warn: (Schema Integrity) api::tour-card.tour-card.attributes.pricing does not exist on destination
+[2026-04-25 01:06:10.450] warn: (Schema Integrity) api::tour-card.tour-card.attributes.tourPlan does not exist on destination
+[2026-04-25 01:06:10.450] warn: (Schema Integrity) api::tour-card.tour-card.attributes.TourOverview does not exist on source
+[2026-04-25 01:06:10.450] warn: (Schema Integrity) tour-details.timeline-step does not exist on destination
+[2026-04-25 01:06:10.450] warn: (Schema Integrity) tour-details.price-tier does not exist on destination
+[2026-04-25 01:06:10.451] warn: (Schema Integrity) tour-details.content-block does not exist on destination

@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutStatistics extends Struct.ComponentSchema {
+  collectionName: 'components_about_statistics';
+  info: {
+    displayName: 'statistics';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_heroes';
   info: {
@@ -75,28 +86,16 @@ export interface TourDetailsPriceTier extends Struct.ComponentSchema {
   };
 }
 
-export interface TourDetailsTimelineStep extends Struct.ComponentSchema {
-  collectionName: 'components_tour_details_timeline_steps';
-  info: {
-    displayName: 'TimelineStep';
-  };
-  attributes: {
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
-    time: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about.statistics': AboutStatistics;
       'blocks.hero': BlocksHero;
       'components.features-item': ComponentsFeaturesItem;
       'shared.gallery': SharedGallery;
       'shared.item': SharedItem;
       'tour-details.content-block': TourDetailsContentBlock;
       'tour-details.price-tier': TourDetailsPriceTier;
-      'tour-details.timeline-step': TourDetailsTimelineStep;
     }
   }
 }
