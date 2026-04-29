@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_abouts",
+  "info": {
+    "displayName": "about"
+  },
+  "options": {},
+  "attributes": {
+    "aboutMyself": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

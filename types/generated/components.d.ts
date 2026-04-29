@@ -11,6 +11,18 @@ export interface AboutStatistics extends Struct.ComponentSchema {
   };
 }
 
+export interface AboutTimelineEvent extends Struct.ComponentSchema {
+  collectionName: 'components_about_timeline_events';
+  info: {
+    displayName: 'TimelineEvent';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    eventTitle: Schema.Attribute.String;
+    year: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_heroes';
   info: {
@@ -35,6 +47,16 @@ export interface ComponentsFeaturesItem extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedAbout extends Struct.ComponentSchema {
+  collectionName: 'components_shared_abouts';
+  info: {
+    displayName: 'about';
+  };
+  attributes: {
+    aboutMyself: Schema.Attribute.Text;
   };
 }
 
@@ -90,8 +112,10 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'about.statistics': AboutStatistics;
+      'about.timeline-event': AboutTimelineEvent;
       'blocks.hero': BlocksHero;
       'components.features-item': ComponentsFeaturesItem;
+      'shared.about': SharedAbout;
       'shared.gallery': SharedGallery;
       'shared.item': SharedItem;
       'tour-details.content-block': TourDetailsContentBlock;
