@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_transfer_popular_routes",
+  "info": {
+    "displayName": "popularRoute",
+    "icon": "wheelchair"
+  },
+  "options": {},
+  "attributes": {
+    "from": {
+      "type": "string",
+      "required": true
+    },
+    "to": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    }
+  },
+  "config": {}
+}

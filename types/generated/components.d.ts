@@ -45,8 +45,8 @@ export interface ComponentsFeaturesItem extends Struct.ComponentSchema {
     displayName: 'Features Item';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -108,6 +108,34 @@ export interface TourDetailsPriceTier extends Struct.ComponentSchema {
   };
 }
 
+export interface TransferPopularRoute extends Struct.ComponentSchema {
+  collectionName: 'components_transfer_popular_routes';
+  info: {
+    displayName: 'popularRoute';
+    icon: 'wheelchair';
+  };
+  attributes: {
+    from: Schema.Attribute.String & Schema.Attribute.Required;
+    price: Schema.Attribute.Integer & Schema.Attribute.Required;
+    to: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface TransferPricingRows extends Struct.ComponentSchema {
+  collectionName: 'components_transfer_pricing_rows';
+  info: {
+    displayName: 'pricingRows';
+    icon: 'plane';
+  };
+  attributes: {
+    priceBusiness: Schema.Attribute.Integer & Schema.Attribute.Required;
+    priceStandard: Schema.Attribute.Integer & Schema.Attribute.Required;
+    priceVip: Schema.Attribute.Integer & Schema.Attribute.Required;
+    subTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -120,6 +148,8 @@ declare module '@strapi/strapi' {
       'shared.item': SharedItem;
       'tour-details.content-block': TourDetailsContentBlock;
       'tour-details.price-tier': TourDetailsPriceTier;
+      'transfer.popular-route': TransferPopularRoute;
+      'transfer.pricing-rows': TransferPricingRows;
     }
   }
 }
