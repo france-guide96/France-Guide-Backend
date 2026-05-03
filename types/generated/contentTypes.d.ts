@@ -725,11 +725,10 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     included: Schema.Attribute.Component<'shared.item', true> &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -740,6 +739,13 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::tour-card.tour-card'
     >;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     price: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

@@ -103,13 +103,13 @@
       },
       "component": "shared.item",
       "repeatable": true,
-      "required": true
+      "required": false
     },
     "gallery": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "component": "shared.gallery",
@@ -135,6 +135,15 @@
       },
       "component": "tour-details.price-tier",
       "repeatable": true,
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "required": true
     }
   }

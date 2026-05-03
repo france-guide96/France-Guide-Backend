@@ -1,0 +1,13 @@
+[2026-05-02 02:42:50.405] warn: (Schema Integrity) api::about-page.about-page.attributes.gallery.pluginOptions.i18n.localized has a different data type
+[2026-05-02 02:42:50.405] warn: (Schema Integrity) api::about-page.about-page.attributes.carousel.pluginOptions.i18n.localized has a different data type
+[2026-05-02 02:42:50.405] warn: (Schema Integrity) api::about-page.about-page.attributes.aboutPageDescription does not exist on destination
+[2026-05-02 02:42:50.405] warn: (Schema Integrity) api::about-page.about-page.attributes.aboutPageImage does not exist on destination
+[2026-05-02 02:42:50.406] warn: (Schema Integrity) api::about-page.about-page.attributes.countExcursions does not exist on destination
+[2026-05-02 02:42:50.406] warn: (Schema Integrity) api::transfer.transfer does not exist on destination
+[2026-05-02 02:42:50.406] warn: (Schema Integrity) transfer.pricing-rows does not exist on destination
+[2026-05-02 02:42:50.406] warn: (Schema Integrity) transfer.popular-route does not exist on destination
+[2026-05-02 02:44:31.180] error: [FATAL] [Data transfer] Error in assets read stream: WebSocket is not open: readyState 3 (CLOSED)
+[2026-05-02 02:44:31.182] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2026-05-02 02:44:31.207] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2026-05-02 02:44:31.216] error: [ERROR] WebSocket is not open: readyState 3 (CLOSED)
+[2026-05-02 02:44:31.220] error: [FATAL] WebSocket is not open: readyState 3 (CLOSED)
