@@ -1,0 +1,150 @@
+{
+    "kind": "collectionType",
+    "collectionName": "tour_cards",
+    "info": {
+        "singularName": "tour-card",
+        "pluralName": "tour-cards",
+        "displayName": "Tour Card"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "primaryText": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "category": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "price": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "rating": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "duration": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "bgImg": {
+            "type": "media",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "slug": {
+            "type": "uid",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "targetField": "primaryText",
+            "required": true
+        },
+        "filterCategory": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "required": true
+        },
+        "included": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "shared.item",
+            "repeatable": true,
+            "required": false
+        },
+        "gallery": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "component": "shared.gallery",
+            "repeatable": true,
+            "required": true
+        },
+        "contentSections": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "tour-details.content-block",
+            "repeatable": true
+        },
+        "pricing": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "component": "tour-details.price-tier",
+            "repeatable": true,
+            "required": true
+        },
+        "order": {
+            "type": "integer",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "required": true
+        }
+    }
+}
