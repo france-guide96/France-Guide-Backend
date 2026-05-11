@@ -93,6 +93,11 @@ export interface TourDetailsContentBlock extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    isNewDesign: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    newDesignImageCarousel: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     title: Schema.Attribute.String;
   };
 }

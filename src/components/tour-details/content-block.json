@@ -10,6 +10,31 @@
     },
     "description": {
       "type": "text"
+    },
+    "isNewDesign": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "newDesignImageCarousel": {
+      "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isNewDesign"
+            },
+            true
+          ]
+        }
+      },
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}
