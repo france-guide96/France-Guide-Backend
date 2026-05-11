@@ -4,7 +4,7 @@
   "info": {
     "singularName": "transfer",
     "pluralName": "transfers",
-    "displayName": "transfer"
+    "displayName": "Трансферы"
   },
   "options": {
     "draftAndPublish": true

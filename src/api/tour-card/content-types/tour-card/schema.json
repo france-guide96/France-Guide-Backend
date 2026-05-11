@@ -4,7 +4,7 @@
   "info": {
     "singularName": "tour-card",
     "pluralName": "tour-cards",
-    "displayName": "Tour Card"
+    "displayName": "Туристическая карта"
   },
   "options": {
     "draftAndPublish": true

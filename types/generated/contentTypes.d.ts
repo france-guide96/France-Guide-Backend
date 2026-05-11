@@ -470,7 +470,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
   collectionName: 'about_pages';
   info: {
-    displayName: 'about-page';
+    displayName: '\u041E \u0433\u0438\u0434\u0435';
     pluralName: 'about-pages';
     singularName: 'about-page';
   };
@@ -636,28 +636,57 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
-    displayName: 'Home Page';
+    displayName: '\u0413\u043B\u0430\u0432\u043D\u0430\u044F \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430';
     pluralName: 'home-pages';
     singularName: 'home-page';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<
-      ['blocks.hero', 'components.features-item']
-    >;
+    categoryDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    categoryTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    HeroDesc: Schema.Attribute.String;
-    HeroTitle: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    heroColorPart: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroDesc: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::home-page.home-page'
-    > &
-      Schema.Attribute.Private;
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -668,7 +697,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
 export interface ApiReviewReview extends Struct.CollectionTypeSchema {
   collectionName: 'reviews';
   info: {
-    displayName: 'Review';
+    displayName: '\u041E\u0442\u0437\u044B\u0432\u044B';
     pluralName: 'reviews';
     singularName: 'review';
   };
@@ -712,7 +741,7 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
 export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
   collectionName: 'tour_cards';
   info: {
-    displayName: 'Tour Card';
+    displayName: '\u0422\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u043A\u0430\u0440\u0442\u0430';
     pluralName: 'tour-cards';
     singularName: 'tour-card';
   };
@@ -834,7 +863,7 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
 export interface ApiTransferTransfer extends Struct.SingleTypeSchema {
   collectionName: 'transfers';
   info: {
-    displayName: 'transfer';
+    displayName: '\u0422\u0440\u0430\u043D\u0441\u0444\u0435\u0440\u044B';
     pluralName: 'transfers';
     singularName: 'transfer';
   };

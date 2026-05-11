@@ -4,25 +4,56 @@
     "info": {
         "singularName": "home-page",
         "pluralName": "home-pages",
-        "displayName": "Home Page"
+        "displayName": "Главная страница"
     },
     "options": {
         "draftAndPublish": true
     },
-    "pluginOptions": {},
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
     "attributes": {
-        "HeroTitle": {
-            "type": "string"
+        "heroTitle": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         },
-        "HeroDesc": {
-            "type": "string"
+        "heroDesc": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         },
-        "blocks": {
-            "type": "dynamiczone",
-            "components": [
-                "blocks.hero",
-                "components.features-item"
-            ]
+        "categoryTitle": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "categoryDescription": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "heroColorPart": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         }
     }
 }
