@@ -15,21 +15,6 @@
     }
   },
   "attributes": {
-    "gallery": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "stats": {
       "type": "component",
       "pluginOptions": {
@@ -72,16 +57,6 @@
         }
       },
       "component": "shared.about",
-      "repeatable": true
-    },
-    "carousel": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "shared.gallery",
       "repeatable": true
     },
     "educationTitle": {
@@ -170,15 +145,6 @@
         }
       }
     },
-    "aboutPageDescription": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
     "aboutPageImage": {
       "type": "media",
       "pluginOptions": {
@@ -186,7 +152,7 @@
           "localized": false
         }
       },
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",
@@ -201,8 +167,22 @@
         "i18n": {
           "localized": false
         }
+      }
+    },
+    "carousel": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
       },
-      "required": true
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
