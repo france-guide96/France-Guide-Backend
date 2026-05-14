@@ -47,14 +47,6 @@
         }
       }
     },
-    "heroColorPart": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "getInTouchTitle": {
       "type": "string",
       "pluginOptions": {

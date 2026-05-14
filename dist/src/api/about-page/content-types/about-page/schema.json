@@ -49,16 +49,6 @@
                 }
             }
         },
-        "myself": {
-            "type": "component",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "component": "shared.about",
-            "repeatable": true
-        },
         "educationTitle": {
             "type": "string",
             "pluginOptions": {
@@ -157,6 +147,14 @@
                 "videos",
                 "audios"
             ]
+        },
+        "aboutMyself": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         }
     }
 }

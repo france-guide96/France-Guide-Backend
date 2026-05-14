@@ -483,6 +483,12 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    aboutMyself: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     aboutPageImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
@@ -542,12 +548,6 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::about-page.about-page'
     >;
-    myself: Schema.Attribute.Component<'shared.about', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     myselfTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -714,12 +714,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         };
       }>;
     getInTouchTitle: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    heroColorPart: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
