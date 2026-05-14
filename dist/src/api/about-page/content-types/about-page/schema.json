@@ -111,32 +111,6 @@
             "component": "components.features-item",
             "repeatable": true
         },
-        "timelineEventTitle": {
-            "type": "string",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            }
-        },
-        "timelineEventSubTitle": {
-            "type": "string",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            }
-        },
-        "timelineEventItem": {
-            "type": "component",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "component": "about.timeline-event",
-            "repeatable": true
-        },
         "myselfTitle": {
             "type": "string",
             "pluginOptions": {
