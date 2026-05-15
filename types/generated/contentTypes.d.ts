@@ -844,7 +844,6 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
         };
       }>;
     gallery: Schema.Attribute.Component<'shared.gallery', true> &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -856,6 +855,13 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    isNewDesign: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

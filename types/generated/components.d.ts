@@ -54,12 +54,11 @@ export interface SharedGallery extends Struct.ComponentSchema {
     displayName: 'gallery';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
+    alt: Schema.Attribute.String;
     image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    > &
-      Schema.Attribute.Required;
+    >;
   };
 }
 
