@@ -807,7 +807,7 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     category: Schema.Attribute.String &
