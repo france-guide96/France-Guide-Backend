@@ -68,10 +68,10 @@
       "type": "media",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",

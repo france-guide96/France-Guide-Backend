@@ -948,14 +948,11 @@ export interface ApiTransferTransfer extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    carImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
+    carImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     carSpecs: Schema.Attribute.Component<'shared.item', true> &
